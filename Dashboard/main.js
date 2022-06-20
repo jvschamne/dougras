@@ -1,6 +1,6 @@
 async function loadRestaurantes() {
     console.log("okok")
-    const response = await fetch('/db/restaurantes.json');
+    const response = await fetch('../db/restaurantes.json');
     const restaurantes = await response.json();
     console.log(restaurantes);
     loadMarmitas(restaurantes)
@@ -8,7 +8,7 @@ async function loadRestaurantes() {
 
 async function loadMarmitas(restaurantes) {
     console.log("okok")
-    const response = await fetch('/db/marmitas.json');
+    const response = await fetch('../db/marmitas.json');
     const marmitas = await response.json();
     console.log(marmitas);
     main(restaurantes, marmitas)
